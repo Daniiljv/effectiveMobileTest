@@ -1,8 +1,8 @@
 package my.code.effectivemobiletest.security;
 
-import com.expert.crmbackend.filter.CustomAuthenticationFilter;
-import com.expert.crmbackend.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
+import my.code.effectivemobiletest.filter.CustomAuthenticationFilter;
+import my.code.effectivemobiletest.repositories.UserRepo;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;

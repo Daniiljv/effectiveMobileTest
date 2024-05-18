@@ -1,10 +1,11 @@
 package my.code.effectivemobiletest.security;
 
-import com.expert.crmbackend.filter.CustomAuthorizationFilter;
-import com.expert.crmbackend.repo.UserRepo;
 import lombok.RequiredArgsConstructor;
+import my.code.effectivemobiletest.filter.CustomAuthorizationFilter;
+import my.code.effectivemobiletest.repositories.UserRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -48,13 +49,8 @@ public class SecurityConfig {
         http.authorizeHttpRequests().requestMatchers(
                         "/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html",
                         "/swagger-resources/**", "/webjars/**")
-                .permitAll();
-        http.authorizeHttpRequests().requestMatchers("/api/users/**", "/api/roles").permitAll();
-        http.authorizeHttpRequests().requestMatchers("/api/block/{userId}/**").hasAuthority("ADMIN");
-        http.authorizeHttpRequests().requestMatchers("/api/unblock/{userId}/**").hasAuthority("ADMIN");
-        http.authorizeHttpRequests().requestMatchers("/api/realEstates/**").hasAnyAuthority("MANAGER", "ADMIN");
-        http.authorizeHttpRequests().requestMatchers("/api/departments/**").hasAnyAuthority("ADMIN");
-        http.authorizeHttpRequests().requestMatchers("/api/comments/**").hasAnyAuthority("MANAGER", "ADMIN");
+                        .permitAll();
+        http.authorizeHttpRequests().requestMatchers(HttpMethod.POST,"/api/users").permitAll();
         http.authorizeHttpRequests().anyRequest().authenticated();
         http.apply(CustomSecurityDetails.customDsl(userRepo));
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);

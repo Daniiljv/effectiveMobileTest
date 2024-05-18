@@ -1,11 +1,9 @@
 package my.code.effectivemobiletest.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,7 +11,8 @@ import java.util.Set;
 import static jakarta.persistence.FetchType.EAGER;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
@@ -23,15 +22,21 @@ public class UserEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq_generator")
     @SequenceGenerator(name = "user_seq_generator", sequenceName = "user_seq", allocationSize = 1)
     private Long id;
-    private String name;
-    private String surname;
-    private String username;
-    private String password;
-    private boolean blocked;
-    @ManyToMany(fetch = EAGER)
-    private Set<Role> roles = new HashSet<>();
 
-    private LocalDateTime lastAuthentication;
-    private String position;
-    private String phoneNumber;
+    @OneToOne
+    private BankAccountEntity bankAccount;
+
+    private HashSet<String> phoneNumbers = new HashSet<>();
+
+    private HashSet<String> emails = new HashSet<>();
+
+    private Date dateOfBirth;
+
+    private String fullName;
+
+    @Column(unique = true)
+    private String username;
+
+    private String password;
+
 }

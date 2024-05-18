@@ -11,9 +11,8 @@ import java.util.Map;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthenticatedUser {
+public class AuthenticatedUserDto {
     private Long id;
-    private String name;
-    private String surname;
+    private String fullName;
     private Map<String, String> tokens;
 }
