@@ -12,9 +12,9 @@ import java.util.List;
 public interface UserService {
     UserDto create(CreateUserDto createUserDto);
     String addPhoneNumber(String phoneNumberToAdd);
-    String changePhoneNumber(String numberToChange, String newNumber);
+    String changePhoneNumber(String numberForChange, String newNumber);
     String addEmail(String emailToAdd);
-    String changeEmail(String emailToChange, String newEmail);
+    String changeEmail(String emailForChange, String newEmail);
     String deletePhoneNumber(String numberToDelete);
     String deleteEmail(String emailToDelete);
     List<UserDto> findByFilters(Date dateOfBirth,

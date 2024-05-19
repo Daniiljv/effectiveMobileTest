@@ -59,31 +59,37 @@ public class UserServiceImpl implements UserService, UserDetailsService {
                         isEmailUnique(createUserDto.getEmail()) &&
                         isLoginUnique(createUserDto.getUsername())) {
 
-                    createUserDto.setPassword(passwordEncoder.encode(createUserDto.getPassword()));
+                    if(createUserDto.getStartBalance().doubleValue() < 0) {
 
-                    HashSet<String> phoneNumbers = new HashSet<>();
-                    phoneNumbers.add(createUserDto.getPhoneNumber());
+                        createUserDto.setPassword(passwordEncoder.encode(createUserDto.getPassword()));
 
-                    HashSet<String> emails = new HashSet<>();
-                    emails.add(createUserDto.getEmail());
+                        HashSet<String> phoneNumbers = new HashSet<>();
+                        phoneNumbers.add(createUserDto.getPhoneNumber());
 
-                    UserEntity user = UserEntity.builder()
-                            .username(createUserDto.getUsername())
-                            .password(createUserDto.getPassword())
-                            .phoneNumbers(phoneNumbers)
-                            .emails(emails)
-                            .build();
+                        HashSet<String> emails = new HashSet<>();
+                        emails.add(createUserDto.getEmail());
 
-                    BankAccountEntity bankAccount = BankAccountEntity.builder()
-                            .balance(createUserDto.getStartBalance())
-                            .build();
-                    bankAccount.setId(bankAccountRepo.save(bankAccount).getId());
+                        UserEntity user = UserEntity.builder()
+                                .username(createUserDto.getUsername())
+                                .password(createUserDto.getPassword())
+                                .phoneNumbers(phoneNumbers)
+                                .emails(emails)
+                                .build();
 
-                    user.setBankAccount(bankAccount);
+                        BankAccountEntity bankAccount = BankAccountEntity.builder()
+                                .balance(createUserDto.getStartBalance())
+                                .build();
+                        bankAccount.setId(bankAccountRepo.save(bankAccount).getId());
 
-                    userRepo.save(user);
+                        user.setBankAccount(bankAccount);
 
-                    return userMapper.toDto(user);
+                        userRepo.save(user);
+
+                        return userMapper.toDto(user);
+                    }
+                    else {
+                        throw new IllegalArgumentException("User can not have negative balance!");
+                    }
 
                 } else {
                     throw new IllegalArgumentException("Phone number, email or username is not unique!");
@@ -114,23 +120,23 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public String changePhoneNumber(String numberToChange, String newNumber) {
+    public String changePhoneNumber(String numberForChange, String newNumber) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         UserEntity user = userRepo.findByUsername(authentication.getName());
 
-        if (numberToChange != null && (newNumber != null && isPhoneNumberUnique(newNumber))) {
+        if (numberForChange != null && (newNumber != null && isPhoneNumberUnique(newNumber))) {
 
-            if (user.getPhoneNumbers().contains(numberToChange)) {
-                user.getPhoneNumbers().remove(numberToChange);
+            if (user.getPhoneNumbers().contains(numberForChange)) {
+                user.getPhoneNumbers().remove(numberForChange);
                 user.getPhoneNumbers().add(newNumber);
                 userRepo.save(user);
             } else {
-                throw new IllegalArgumentException("User does not have this number - " + numberToChange);
+                throw new IllegalArgumentException("User does not have this number - " + numberForChange);
             }
 
-        } else throw new IllegalArgumentException(String.format("Number %s can not be added to user", newNumber));
+        } else throw new IllegalArgumentException(String.format("Number %s can not be changed!", numberForChange));
 
         return "Number successfully changed!";
     }
@@ -151,22 +157,22 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public String changeEmail(String emailToChange, String newEmail) {
+    public String changeEmail(String emailForChange, String newEmail) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         UserEntity user = userRepo.findByUsername(authentication.getName());
 
-        if (emailToChange != null && (newEmail != null && isEmailUnique(newEmail))) {
+        if (emailForChange != null && (newEmail != null && isEmailUnique(newEmail))) {
 
-            if (user.getPhoneNumbers().contains(emailToChange)) {
-                user.getPhoneNumbers().remove(emailToChange);
-                user.getPhoneNumbers().add(newEmail);
+            if (user.getEmails().contains(emailForChange)) {
+                user.getEmails().remove(emailForChange);
+                user.getEmails().add(newEmail);
                 userRepo.save(user);
             } else {
-                throw new IllegalArgumentException("User does not have this email - " + emailToChange);
+                throw new IllegalArgumentException("User does not have this email - " + emailForChange);
             }
 
-        } else throw new IllegalArgumentException(String.format("Email %s can not be added to user!", newEmail));
+        } else throw new IllegalArgumentException(String.format("Email %s can not be changed!", emailForChange));
 
         return "Email successfully changed!";
     }

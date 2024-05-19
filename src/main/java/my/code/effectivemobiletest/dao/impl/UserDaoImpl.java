@@ -20,7 +20,10 @@ public class UserDaoImpl implements UserDao {
     private final DatabaseConfig databaseConfig;
 
     @Override
-    public List<UserDto> findByFilters(Date dateOfBirth, String phoneNumber, String fullName, String email) {
+    public List<UserDto> findByFilters(Date dateOfBirth,
+                                       String phoneNumber,
+                                       String fullName,
+                                       String email) {
 
         List<UserDto> userDtoList = new ArrayList<>();
         List<Object> parameters = new ArrayList<>();
@@ -29,6 +32,7 @@ public class UserDaoImpl implements UserDao {
         StringBuilder query = new StringBuilder("""
                 SELECT *
                 FROM users u
+                LEFT JOIN bank_accounts ba ON u.bank_account_id = ba.id
                 WHERE 1=1
                 """);
 
@@ -38,7 +42,7 @@ public class UserDaoImpl implements UserDao {
         }
 
         if (phoneNumber != null) {
-            query.append(" AND u.phone_number = ?");
+            query.append(" AND ? = ANY(u.phone_numbers)");
             parameters.add(phoneNumber);
         }
 
@@ -48,7 +52,8 @@ public class UserDaoImpl implements UserDao {
         }
 
         if (email != null) {
-            query.append(" AND u.email = ?");
+            query.append(" AND ? = ANY(u.emails)");
+
             parameters.add(email);
         }
 
