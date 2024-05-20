@@ -25,7 +25,9 @@ public class UserDaoImpl implements UserDao {
     public List<UserDto> findByFilters(Date dateOfBirth,
                                        String phoneNumber,
                                        String fullName,
-                                       String email) {
+                                       String email,
+                                       int page,
+                                       int pageSize) {
         log.info(String.format("Started UserDaoImpl findByFilters(%s, %s, %s, %s)",
                 dateOfBirth, phoneNumber, fullName, email));
 
@@ -57,9 +59,12 @@ public class UserDaoImpl implements UserDao {
 
         if (email != null) {
             query.append(" AND ? = ANY(u.emails)");
-
             parameters.add(email);
         }
+
+        query.append(" ORDER BY u.id");
+        query.append(" LIMIT ? OFFSET ?");
+
 
         try (Connection connection = databaseConfig.connection();
              PreparedStatement preparedStatement = connection.prepareStatement(query.toString())) {
@@ -67,6 +72,9 @@ public class UserDaoImpl implements UserDao {
             for (int i = 0; i < parameters.size(); i++) {
                 preparedStatement.setObject(i + 1, parameters.get(i));
             }
+
+            preparedStatement.setInt(parameters.size() + 1, pageSize);
+            preparedStatement.setInt(parameters.size() + 2, (page - 1) * pageSize);
 
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {

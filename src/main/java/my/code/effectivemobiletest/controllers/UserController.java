@@ -184,17 +184,23 @@ public class UserController {
                     responseCode = "404",
                     description = "Пользователей нет")
     })
-    @Operation(summary = "Энд поинт делает поиск по переданным фильтрам")
+    @Operation(summary = "Энд поинт делает поиск по переданным фильтрам, обязательными параметрами являются только " +
+            "номер страницы и ее размер")
     @GetMapping("/findByFilters")
     public ResponseEntity<List<UserDto>> findByFilters(@RequestParam(required = false) Date dateOfBirth,
                                                        @RequestParam(required = false) String phoneNumber,
                                                        @RequestParam(required = false) String fullName,
-                                                       @RequestParam(required = false) String email) {
+                                                       @RequestParam(required = false) String email,
+                                                       @RequestParam int page,
+                                                       @RequestParam int pageSize) {
         try {
             return new ResponseEntity<>(userService.findByFilters(dateOfBirth,
                     phoneNumber,
                     fullName,
-                    email), HttpStatus.OK);
+                    email,
+                    page,
+                    pageSize
+                    ), HttpStatus.OK);
         } catch (NullPointerException nullPointerException) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

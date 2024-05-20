@@ -435,3 +435,384 @@ jakarta.validation.NoProviderFoundException: Unable to create a Configuration, b
 2024-05-20 16:27:36.879 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-05-20 16:27:36.881 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
 2024-05-20 16:27:36.885 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-20 21:41:41.393 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-20 21:41:41.440 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 3360 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-20 21:41:41.441 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-20 21:41:42.265 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:41:42.266 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-20 21:41:42.311 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:41:42.312 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:41:42.313 [main] INFO  : Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
+2024-05-20 21:41:42.324 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:41:42.326 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-20 21:41:42.362 [main] INFO  : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2024-05-20 21:41:42.890 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-20 21:41:42.899 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:41:42.900 [main] INFO  : Starting service [Tomcat]
+2024-05-20 21:41:42.900 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-20 21:41:42.996 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-20 21:41:42.997 [main] INFO  : Root WebApplicationContext: initialization completed in 1509 ms
+2024-05-20 21:41:43.126 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-20 21:41:43.187 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-20 21:41:43.476 [main] INFO  : HikariPool-1 - Starting...
+2024-05-20 21:41:43.722 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb12f41
+2024-05-20 21:41:43.724 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-20 21:41:43.777 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-20 21:41:44.616 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-20 21:41:44.626 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:41:45.179 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-20 21:41:45.458 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e1ce99c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26f7b114, org.springframework.security.web.context.SecurityContextHolderFilter@38326fd5, org.springframework.security.web.header.HeaderWriterFilter@2370c90, org.springframework.web.filter.CorsFilter@43120a77, org.springframework.security.web.authentication.logout.LogoutFilter@d6879bf, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@209d0037, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@22f0e329, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@92775a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45a4587d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b39bee2, org.springframework.security.web.session.SessionManagementFilter@61627c9d, org.springframework.security.web.access.ExceptionTranslationFilter@1e9a10e9, org.springframework.security.web.access.intercept.AuthorizationFilter@434a72f2]
+2024-05-20 21:41:45.807 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:41:45.825 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-20 21:41:45.837 [main] INFO  : Started EffectiveMobileTestApplication in 4.775 seconds (process running for 5.655)
+2024-05-20 21:41:50.335 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:41:50.338 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-20 21:41:50.341 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-20 21:44:18.271 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-20 21:44:18.303 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 15364 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-20 21:44:18.304 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-20 21:44:19.097 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:44:19.099 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-20 21:44:19.140 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:44:19.142 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:44:19.142 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces.
+2024-05-20 21:44:19.150 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:44:19.151 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-20 21:44:19.179 [main] INFO  : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
+2024-05-20 21:44:19.724 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-20 21:44:19.733 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:44:19.734 [main] INFO  : Starting service [Tomcat]
+2024-05-20 21:44:19.734 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-20 21:44:19.822 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-20 21:44:19.822 [main] INFO  : Root WebApplicationContext: initialization completed in 1479 ms
+2024-05-20 21:44:19.947 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-20 21:44:19.988 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-20 21:44:20.264 [main] INFO  : HikariPool-1 - Starting...
+2024-05-20 21:44:20.427 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1410d645
+2024-05-20 21:44:20.429 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-20 21:44:20.459 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-20 21:44:21.246 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-20 21:44:21.254 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:44:21.825 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-20 21:44:22.134 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5466a819, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30cb489a, org.springframework.security.web.context.SecurityContextHolderFilter@4e93d23e, org.springframework.security.web.header.HeaderWriterFilter@f73a7cf, org.springframework.web.filter.CorsFilter@68af8288, org.springframework.security.web.authentication.logout.LogoutFilter@1c80f8dd, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@401d83ce, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@3b7b099b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eadc347, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6771efaa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5abc488d, org.springframework.security.web.session.SessionManagementFilter@53dd29e0, org.springframework.security.web.access.ExceptionTranslationFilter@154208f2, org.springframework.security.web.access.intercept.AuthorizationFilter@3eadfbbb]
+2024-05-20 21:44:22.460 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:44:22.478 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-20 21:44:22.491 [main] INFO  : Started EffectiveMobileTestApplication in 4.483 seconds (process running for 5.166)
+2024-05-20 21:44:53.520 [http-nio-8080-exec-7] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-20 21:44:53.528 [http-nio-8080-exec-7] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-05-20 21:44:53.528 [http-nio-8080-exec-7] INFO  : Completed initialization in 0 ms
+2024-05-20 21:45:19.834 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:19.834 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:19.850 [http-nio-8080-exec-4] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@ade17ad, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
+2024-05-20 21:45:19.858 [http-nio-8080-exec-4] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@ade17ad, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
+2024-05-20 21:45:30.782 [http-nio-8080-exec-5] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:30.782 [http-nio-8080-exec-5] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:30.790 [http-nio-8080-exec-5] WARN  : Соединение уже было закрыто
+2024-05-20 21:45:30.831 [http-nio-8080-exec-5] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
+java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
+	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
+	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
+	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
+	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
+	at org.apache.coyote.Response.action(Response.java:212)
+	at org.apache.coyote.Response.sendHeaders(Response.java:450)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
+	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
+	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
+	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-05-20 21:45:42.280 [http-nio-8080-exec-6] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:42.280 [http-nio-8080-exec-6] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
+2024-05-20 21:45:42.280 [http-nio-8080-exec-6] WARN  : Соединение уже было закрыто
+2024-05-20 21:45:42.282 [http-nio-8080-exec-6] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
+java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
+	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
+	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
+	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
+	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
+	at org.apache.coyote.Response.action(Response.java:212)
+	at org.apache.coyote.Response.sendHeaders(Response.java:450)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
+	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
+	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
+	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-05-20 21:46:13.093 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:46:13.093 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-20 21:46:13.106 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-20 21:46:28.742 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-20 21:46:28.776 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 17856 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-20 21:46:28.777 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-20 21:46:29.549 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:46:29.551 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-20 21:46:29.586 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:46:29.587 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:46:29.589 [main] INFO  : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2024-05-20 21:46:29.596 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:46:29.597 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-20 21:46:29.625 [main] INFO  : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
+2024-05-20 21:46:30.156 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-20 21:46:30.173 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:46:30.174 [main] INFO  : Starting service [Tomcat]
+2024-05-20 21:46:30.174 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-20 21:46:30.297 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-20 21:46:30.297 [main] INFO  : Root WebApplicationContext: initialization completed in 1477 ms
+2024-05-20 21:46:30.453 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-20 21:46:30.524 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-20 21:46:30.793 [main] INFO  : HikariPool-1 - Starting...
+2024-05-20 21:46:31.054 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a0d313
+2024-05-20 21:46:31.056 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-20 21:46:31.084 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-20 21:46:31.918 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-20 21:46:31.926 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:46:32.560 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-20 21:46:32.911 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14af57c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@795949fb, org.springframework.security.web.context.SecurityContextHolderFilter@2c750b69, org.springframework.security.web.header.HeaderWriterFilter@6c056020, org.springframework.web.filter.CorsFilter@8dc3019, org.springframework.security.web.authentication.logout.LogoutFilter@3eadfbbb, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@2aeb3f3b, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@281028ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6484364f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29a5f924, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46ef7340, org.springframework.security.web.session.SessionManagementFilter@446fb72e, org.springframework.security.web.access.ExceptionTranslationFilter@5c8e7687, org.springframework.security.web.access.intercept.AuthorizationFilter@73483d4b]
+2024-05-20 21:46:33.286 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:46:33.309 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-20 21:46:33.321 [main] INFO  : Started EffectiveMobileTestApplication in 4.85 seconds (process running for 5.579)
+2024-05-20 21:46:44.888 [http-nio-8080-exec-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-20 21:46:44.888 [http-nio-8080-exec-4] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-05-20 21:46:44.889 [http-nio-8080-exec-4] INFO  : Completed initialization in 1 ms
+2024-05-20 21:46:44.975 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
+2024-05-20 21:46:44.976 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
+2024-05-20 21:46:44.986 [http-nio-8080-exec-4] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@24db357a, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm), UserDto(id=2, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@3db8eef, phoneNumbers=[{sdf}], emails=[{daniil@sdfs.com}], dateOfBirth=null, fullName=null, username=eww, password=$2a$10$XVAsn7W226MG6jvr29zc4uT/fDjyxZWzQr2053Dx3id72C43FZPRK)]
+2024-05-20 21:46:44.986 [http-nio-8080-exec-4] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@24db357a, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm), UserDto(id=2, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@3db8eef, phoneNumbers=[{sdf}], emails=[{daniil@sdfs.com}], dateOfBirth=null, fullName=null, username=eww, password=$2a$10$XVAsn7W226MG6jvr29zc4uT/fDjyxZWzQr2053Dx3id72C43FZPRK)]
+2024-05-20 21:47:03.214 [http-nio-8080-exec-3] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
+2024-05-20 21:47:03.214 [http-nio-8080-exec-3] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
+2024-05-20 21:47:03.216 [http-nio-8080-exec-3] WARN  : Соединение уже было закрыто
+2024-05-20 21:47:03.230 [http-nio-8080-exec-3] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
+java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
+	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
+	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
+	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
+	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
+	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
+	at org.apache.coyote.Response.action(Response.java:212)
+	at org.apache.coyote.Response.sendHeaders(Response.java:450)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
+	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
+	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
+	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
+	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-05-20 21:52:17.750 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:52:17.750 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-20 21:52:17.782 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-20 21:52:24.352 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-20 21:52:24.383 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 13464 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-20 21:52:24.385 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-20 21:52:25.293 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:52:25.294 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-20 21:52:25.338 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:52:25.341 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-20 21:52:25.342 [main] INFO  : Finished Spring Data repository scanning in 43 ms. Found 0 JDBC repository interfaces.
+2024-05-20 21:52:25.355 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-20 21:52:25.357 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-20 21:52:25.399 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-05-20 21:52:25.995 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-20 21:52:26.006 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:52:26.006 [main] INFO  : Starting service [Tomcat]
+2024-05-20 21:52:26.007 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-20 21:52:26.102 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-20 21:52:26.102 [main] INFO  : Root WebApplicationContext: initialization completed in 1671 ms
+2024-05-20 21:52:26.222 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-20 21:52:26.267 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-20 21:52:26.525 [main] INFO  : HikariPool-1 - Starting...
+2024-05-20 21:52:26.783 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c6379c
+2024-05-20 21:52:26.785 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-20 21:52:26.817 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-20 21:52:27.667 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-20 21:52:27.676 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:52:28.588 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-20 21:52:28.857 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bc08a77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37922937, org.springframework.security.web.context.SecurityContextHolderFilter@d6879bf, org.springframework.security.web.header.HeaderWriterFilter@45f70f68, org.springframework.web.filter.CorsFilter@76980c75, org.springframework.security.web.authentication.logout.LogoutFilter@5f6ba085, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@73483d4b, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@8961e55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318a81a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21fa19e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67eabe02, org.springframework.security.web.session.SessionManagementFilter@623d222, org.springframework.security.web.access.ExceptionTranslationFilter@3ca5da54, org.springframework.security.web.access.intercept.AuthorizationFilter@7552f05b]
+2024-05-20 21:52:29.233 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-20 21:52:29.255 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-20 21:52:29.271 [main] INFO  : Started EffectiveMobileTestApplication in 5.227 seconds (process running for 5.931)
+2024-05-20 21:52:38.999 [http-nio-8080-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-20 21:52:38.999 [http-nio-8080-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-05-20 21:52:39.007 [http-nio-8080-exec-1] INFO  : Completed initialization in 8 ms
+2024-05-20 21:52:39.232 [http-nio-8080-exec-1] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
+2024-05-20 21:52:39.232 [http-nio-8080-exec-1] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
+2024-05-20 21:52:39.242 [http-nio-8080-exec-1] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@2bb1be40, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
+2024-05-20 21:52:39.242 [http-nio-8080-exec-1] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@2bb1be40, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
+2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.

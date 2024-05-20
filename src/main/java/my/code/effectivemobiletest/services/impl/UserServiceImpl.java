@@ -258,11 +258,13 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public List<UserDto> findByFilters(Date dateOfBirth,
                                        String phoneNumber,
                                        String fullName,
-                                       String email) {
+                                       String email,
+                                       int page,
+                                       int pageSize) {
         log.info(String.format("Started UserServiceImpl findByFilters(%s, %s, %s, %s)",
                 dateOfBirth, phoneNumber, fullName, email));
 
-        List<UserDto> result = userDao.findByFilters(dateOfBirth, phoneNumber, fullName, email);
+        List<UserDto> result = userDao.findByFilters(dateOfBirth, phoneNumber, fullName, email, page, pageSize);
 
         if (result.isEmpty()){
             log.warn("Users are not found");

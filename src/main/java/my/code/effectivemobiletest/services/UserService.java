@@ -21,7 +21,9 @@ public interface UserService {
     List<UserDto> findByFilters(Date dateOfBirth,
                                 String phoneNumber,
                                 String fullName,
-                                String email);
+                                String email,
+                                int page,
+                                int pageSize);
 
     String transaction(Long transferToUserId, BigDecimal amountToTransfer);
 }
