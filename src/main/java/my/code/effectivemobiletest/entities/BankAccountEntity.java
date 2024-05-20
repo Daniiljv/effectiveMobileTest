@@ -18,5 +18,7 @@ public class BankAccountEntity {
     @SequenceGenerator(name = "bank_accounts_seq_generator", sequenceName = "bank_accounts_seq", allocationSize = 1)
     private Long id;
 
-    private BigDecimal balance;
+    private BigDecimal startBalance;
+
+    private BigDecimal currentBalance;
 }

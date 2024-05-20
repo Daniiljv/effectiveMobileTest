@@ -5,6 +5,7 @@ import my.code.effectivemobiletest.dtos.CreateUserDto;
 import my.code.effectivemobiletest.dtos.UserDto;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
 
@@ -22,4 +23,5 @@ public interface UserService {
                                 String fullName,
                                 String email);
 
+    String transaction(Long transferToUserId, BigDecimal amountToTransfer);
 }

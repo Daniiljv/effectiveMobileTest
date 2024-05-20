@@ -3,11 +3,14 @@ package my.code.effectivemobiletest.controllers;
 import lombok.RequiredArgsConstructor;
 import my.code.effectivemobiletest.dtos.CreateUserDto;
 import my.code.effectivemobiletest.dtos.UserDto;
+import my.code.effectivemobiletest.exceptions.InsufficientFundsException;
+import my.code.effectivemobiletest.exceptions.SameUserTransactionException;
 import my.code.effectivemobiletest.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
 
@@ -90,11 +93,22 @@ public class UserController {
                                                        @RequestParam(required = false) String email) {
         try {
             return new ResponseEntity<>(userService.findByFilters(dateOfBirth,
-                                                                  phoneNumber,
-                                                                  fullName,
-                                                                  email), HttpStatus.OK);
-        } catch (RuntimeException runtimeException){
+                    phoneNumber,
+                    fullName,
+                    email), HttpStatus.OK);
+        } catch (RuntimeException runtimeException) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @PutMapping("/transaction")
+    public ResponseEntity<String> transaction(@RequestParam Long transferToUserId,
+                                              @RequestParam BigDecimal amountToTransfer) {
+        try {
+            return new ResponseEntity<>(userService.transaction(transferToUserId, amountToTransfer), HttpStatus.OK);
+        } catch (NullPointerException | InsufficientFundsException |
+                 SameUserTransactionException | IllegalArgumentException exception) {
+            return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
 }

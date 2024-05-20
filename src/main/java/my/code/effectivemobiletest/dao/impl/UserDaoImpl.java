@@ -1,6 +1,7 @@
 package my.code.effectivemobiletest.dao.impl;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import my.code.effectivemobiletest.configs.DatabaseConfig;
 import my.code.effectivemobiletest.dao.UserDao;
 import my.code.effectivemobiletest.dtos.UserDto;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class UserDaoImpl implements UserDao {
@@ -24,6 +26,8 @@ public class UserDaoImpl implements UserDao {
                                        String phoneNumber,
                                        String fullName,
                                        String email) {
+        log.info(String.format("Started UserDaoImpl findByFilters(%s, %s, %s, %s)",
+                dateOfBirth, phoneNumber, fullName, email));
 
         List<UserDto> userDtoList = new ArrayList<>();
         List<Object> parameters = new ArrayList<>();
@@ -64,7 +68,7 @@ public class UserDaoImpl implements UserDao {
                 preparedStatement.setObject(i + 1, parameters.get(i));
             }
 
-            try(ResultSet resultSet = preparedStatement.executeQuery()) {
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
                     UserDto userDto = new UserDto();
 
@@ -72,7 +76,8 @@ public class UserDaoImpl implements UserDao {
 
                     BankAccountEntity bankAccount = new BankAccountEntity();
                     bankAccount.setId(resultSet.getLong("bank_account_id"));
-                    bankAccount.setBalance(resultSet.getBigDecimal("balance"));
+                    bankAccount.setStartBalance(resultSet.getBigDecimal("start_balance"));
+                    bankAccount.setCurrentBalance(resultSet.getBigDecimal("current_balance"));
                     userDto.setBankAccount(bankAccount);
 
                     userDto.setDateOfBirth(resultSet.getDate("date_of_birth"));
@@ -93,10 +98,13 @@ public class UserDaoImpl implements UserDao {
 
                 }
             }
-        } catch (SQLException sqlException){
+        } catch (SQLException sqlException) {
+            log.warn(sqlException.getMessage());
             throw new RuntimeException(sqlException.getMessage());
         }
 
+        log.info(String.format("Finished UserDaoImpl findByFilters(). Result - %s",
+                userDtoList));
         return userDtoList;
     }
 }
