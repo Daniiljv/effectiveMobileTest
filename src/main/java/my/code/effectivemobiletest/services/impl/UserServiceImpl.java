@@ -264,6 +264,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
         List<UserDto> result = userDao.findByFilters(dateOfBirth, phoneNumber, fullName, email);
 
+        if (result.isEmpty()){
+            log.warn("Users are not found");
+            throw new NullPointerException("Users are not found");
+        }
+
         log.info(String.format("Finished UserServiceImpl findByFilters(). Result - %s",
                 result));
 

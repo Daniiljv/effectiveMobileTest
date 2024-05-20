@@ -432,3 +432,6 @@ jakarta.validation.NoProviderFoundException: Unable to create a Configuration, b
 2024-05-20 16:26:34.584 [http-nio-8080-exec-5] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
 2024-05-20 16:26:34.585 [http-nio-8080-exec-5] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
 2024-05-20 16:26:34.585 [http-nio-8080-exec-5] WARN  : Соединение уже было закрыто
+2024-05-20 16:27:36.879 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-20 16:27:36.881 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-20 16:27:36.885 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
