@@ -1,818 +1,760 @@
-2024-05-20 16:14:35.862 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 4132 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 16:14:35.864 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 16:14:36.543 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:14:36.544 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 16:14:36.575 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:14:36.603 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:14:36.605 [main] INFO  : Finished Spring Data repository scanning in 57 ms. Found 0 JDBC repository interfaces.
-2024-05-20 16:14:36.623 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:14:36.625 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 16:14:36.665 [main] INFO  : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
-2024-05-20 16:14:37.175 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 16:14:37.190 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:14:37.192 [main] INFO  : Starting service [Tomcat]
-2024-05-20 16:14:37.193 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 16:14:37.278 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 16:14:37.278 [main] INFO  : Root WebApplicationContext: initialization completed in 1373 ms
-2024-05-20 16:14:37.454 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 16:14:37.531 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 16:14:37.906 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 16:14:38.090 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@699d96bc
-2024-05-20 16:14:38.093 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 16:14:38.151 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 16:14:38.451 [main] INFO  : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479)
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:515)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1664)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1345)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:415)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:235)
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5144)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:886)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:252)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:430)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:926)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:485)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:488)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:210)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:183)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:578)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+2024-05-21 15:35:06.500 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 15:35:06.562 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 11456 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 15:35:06.563 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 15:35:07.458 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-21 15:35:07.460 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-21 15:35:07.503 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-21 15:35:07.505 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-21 15:35:07.505 [main] INFO  : Finished Spring Data repository scanning in 40 ms. Found 0 JDBC repository interfaces.
+2024-05-21 15:35:07.515 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-21 15:35:07.516 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-21 15:35:07.557 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2024-05-21 15:35:08.080 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-21 15:35:08.089 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-21 15:35:08.090 [main] INFO  : Starting service [Tomcat]
+2024-05-21 15:35:08.090 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-21 15:35:08.185 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-21 15:35:08.185 [main] INFO  : Root WebApplicationContext: initialization completed in 1564 ms
+2024-05-21 15:35:08.298 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-21 15:35:08.370 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-21 15:35:08.671 [main] INFO  : HikariPool-1 - Starting...
+2024-05-21 15:35:08.907 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-21 15:35:08.962 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-21 15:35:09.860 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-21 15:35:09.869 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-21 15:35:10.434 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-21 15:35:10.702 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6771efaa, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@446fb72e, org.springframework.security.web.context.SecurityContextHolderFilter@2e60d4f4, org.springframework.security.web.header.HeaderWriterFilter@47bbf44d, org.springframework.web.filter.CorsFilter@ad585fb, org.springframework.security.web.authentication.logout.LogoutFilter@56017274, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@26caf4b6, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@4411a0fe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@45ecdd32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17e4beda, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c750b69, org.springframework.security.web.session.SessionManagementFilter@2370c90, org.springframework.security.web.access.ExceptionTranslationFilter@55465bfc, org.springframework.security.web.access.intercept.AuthorizationFilter@949f0d]
+2024-05-21 15:35:11.061 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-21 15:35:11.082 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-21 15:35:11.098 [main] INFO  : Started EffectiveMobileTestApplication in 4.942 seconds (process running for 6.687)
+2024-05-21 15:36:11.005 [http-nio-8080-exec-2] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-21 15:36:11.005 [http-nio-8080-exec-2] INFO  : Initializing Servlet 'dispatcherServlet'
+2024-05-21 15:36:11.010 [http-nio-8080-exec-2] INFO  : Completed initialization in 5 ms
+2024-05-21 15:36:33.113 [http-nio-8080-exec-3] INFO  : Started UserServiceImpl transaction(2, 1000)
+2024-05-21 15:36:35.086 [http-nio-8080-exec-7] INFO  : Started UserServiceImpl transaction(2, 1000)
+2024-05-21 15:36:36.716 [http-nio-8080-exec-10] INFO  : Started UserServiceImpl transaction(2, 1000)
+2024-05-21 15:36:36.727 [http-nio-8080-exec-10] WARN  : User doesn't have enough money for transaction! Please top up your balance.
+2024-05-21 15:36:37.757 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl transaction(2, 1000)
+2024-05-21 15:36:37.773 [http-nio-8080-exec-4] WARN  : User doesn't have enough money for transaction! Please top up your balance.
+2024-05-21 15:36:42.396 [http-nio-8080-exec-9] INFO  : Started UserServiceImpl transaction(2, 1000)
+2024-05-21 15:36:42.403 [http-nio-8080-exec-9] WARN  : User doesn't have enough money for transaction! Please top up your balance.
+2024-05-21 15:46:17.812 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-21 15:46:17.816 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-21 15:46:17.820 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-21 15:46:22.018 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 15:46:22.071 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 7576 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 15:46:22.073 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 15:46:22.870 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-21 15:46:22.872 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-05-21 15:46:22.917 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-21 15:46:22.920 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2024-05-21 15:46:22.921 [main] INFO  : Finished Spring Data repository scanning in 45 ms. Found 0 JDBC repository interfaces.
+2024-05-21 15:46:22.931 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-21 15:46:22.932 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-21 15:46:22.970 [main] INFO  : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-05-21 15:46:23.530 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
+2024-05-21 15:46:23.539 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
+2024-05-21 15:46:23.540 [main] INFO  : Starting service [Tomcat]
+2024-05-21 15:46:23.540 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2024-05-21 15:46:23.625 [main] INFO  : Initializing Spring embedded WebApplicationContext
+2024-05-21 15:46:23.625 [main] INFO  : Root WebApplicationContext: initialization completed in 1502 ms
+2024-05-21 15:46:23.763 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-21 15:46:23.816 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
+2024-05-21 15:46:24.060 [main] INFO  : HikariPool-1 - Starting...
+2024-05-21 15:46:24.241 [main] INFO  : HikariPool-1 - Start completed.
+2024-05-21 15:46:24.274 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2024-05-21 15:46:25.411 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-05-21 15:46:25.419 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-21 15:46:25.998 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-21 15:46:26.263 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@67eabe02, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4197e859, org.springframework.security.web.context.SecurityContextHolderFilter@4198921f, org.springframework.security.web.header.HeaderWriterFilter@2bf0bb93, org.springframework.web.filter.CorsFilter@76980c75, org.springframework.security.web.authentication.logout.LogoutFilter@22f0e329, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@73072745, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@4bdbfbc6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21fa19e4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@434a72f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79735611, org.springframework.security.web.session.SessionManagementFilter@154208f2, org.springframework.security.web.access.ExceptionTranslationFilter@406d922, org.springframework.security.web.access.intercept.AuthorizationFilter@5b4ce00]
+2024-05-21 15:46:26.593 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
+2024-05-21 15:46:26.611 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-05-21 15:46:26.627 [main] INFO  : Started EffectiveMobileTestApplication in 4.983 seconds (process running for 5.883)
+2024-05-21 15:46:58.286 [main] INFO  : Could not detect default configuration classes for test class [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests]: EffectiveMobileTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-21 15:46:58.411 [main] INFO  : Found @SpringBootConfiguration my.code.effectivemobiletest.EffectiveMobileTestApplication for test class my.code.effectivemobiletest.EffectiveMobileTestApplicationTests
+2024-05-21 15:50:03.341 [main] INFO  : Could not detect default configuration classes for test class [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests]: EffectiveMobileTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-21 15:50:03.466 [main] INFO  : Found @SpringBootConfiguration my.code.effectivemobiletest.EffectiveMobileTestApplication for test class my.code.effectivemobiletest.EffectiveMobileTestApplicationTests
+2024-05-21 15:50:03.849 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 15:50:03.870 [main] INFO  : Starting EffectiveMobileTestApplicationTests using Java 18.0.2 with PID 12896 (started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 15:50:03.871 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 15:50:04.083 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+2024-05-21 15:50:04.314 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
-	at my.code.effectivemobiletest.EffectiveMobileTestApplication.main(EffectiveMobileTestApplication.java:10)
-2024-05-20 16:14:38.978 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 16:14:38.985 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:14:39.624 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 16:14:39.906 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@79a92277, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7712df76, org.springframework.security.web.context.SecurityContextHolderFilter@43d84df1, org.springframework.security.web.header.HeaderWriterFilter@5a6d4dee, org.springframework.web.filter.CorsFilter@263e512e, org.springframework.security.web.authentication.logout.LogoutFilter@89ff043, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@e98adb2, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@2c3d0ff8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f04fb07, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e3a07ab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cb73a92, org.springframework.security.web.session.SessionManagementFilter@41e43885, org.springframework.security.web.access.ExceptionTranslationFilter@25762f04, org.springframework.security.web.access.intercept.AuthorizationFilter@45cddfd3]
-2024-05-20 16:14:40.237 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:14:40.254 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 16:14:40.267 [main] INFO  : Started EffectiveMobileTestApplication in 4.715 seconds (process running for 5.43)
-2024-05-20 16:14:52.093 [http-nio-8080-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 16:14:52.093 [http-nio-8080-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 16:14:52.095 [http-nio-8080-exec-1] INFO  : Completed initialization in 2 ms
-2024-05-20 16:14:52.228 [http-nio-8080-exec-1] INFO  : Started UserServiceImpl create(CreateUserDto(username=Daniil, password=1234, startBalance=1234, phoneNumber=12345678, email=daniil@email.com))
-2024-05-20 16:14:52.369 [http-nio-8080-exec-1] WARN  : Phone number, email or username is not unique!
-2024-05-20 16:16:44.858 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:16:44.860 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 16:16:44.864 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 16:16:48.731 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 7156 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 16:16:48.732 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 16:16:49.512 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:16:49.514 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 16:16:49.556 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:16:49.557 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:16:49.558 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces.
-2024-05-20 16:16:49.567 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:16:49.568 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 16:16:49.595 [main] INFO  : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
-2024-05-20 16:16:50.093 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 16:16:50.109 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:16:50.111 [main] INFO  : Starting service [Tomcat]
-2024-05-20 16:16:50.112 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 16:16:50.261 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 16:16:50.261 [main] INFO  : Root WebApplicationContext: initialization completed in 1490 ms
-2024-05-20 16:16:50.385 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 16:16:50.460 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 16:16:50.788 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 16:16:51.038 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@697a92af
-2024-05-20 16:16:51.041 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 16:16:51.092 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 16:16:51.343 [main] INFO  : Error calling `jakarta.validation.Validation#buildDefaultValidatorFactory`
-jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-	at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291)
-	at jakarta.validation.Validation.buildDefaultValidatorFactory(Validation.java:103)
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.getValidatorFactory(TypeSafeActivator.java:479)
-	at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator.java:82)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:515)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
-	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1664)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1413)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1345)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:415)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1325)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153)
-	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:261)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:235)
-	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5144)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:886)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1393)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1383)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:916)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:252)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:430)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:926)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:485)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:488)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:210)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:183)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:578)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:283)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:269)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameter(ParameterResolutionUtils.java:136)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameters(ParameterResolutionUtils.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:59)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:310)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:286)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 79 common frames omitted
+2024-05-21 15:51:16.165 [main] INFO  : Could not detect default configuration classes for test class [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests]: EffectiveMobileTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-21 15:51:16.284 [main] INFO  : Found @SpringBootConfiguration my.code.effectivemobiletest.EffectiveMobileTestApplication for test class my.code.effectivemobiletest.EffectiveMobileTestApplicationTests
+2024-05-21 15:51:16.640 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 15:51:16.659 [main] INFO  : Starting EffectiveMobileTestApplicationTests using Java 18.0.2 with PID 9508 (started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 15:51:16.661 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 15:51:16.893 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+2024-05-21 15:51:17.088 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
-	at my.code.effectivemobiletest.EffectiveMobileTestApplication.main(EffectiveMobileTestApplication.java:10)
-2024-05-20 16:16:51.904 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 16:16:51.911 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:16:52.533 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 16:16:52.775 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@508abc74, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77b01226, org.springframework.security.web.context.SecurityContextHolderFilter@5812935, org.springframework.security.web.header.HeaderWriterFilter@19ee0a2f, org.springframework.web.filter.CorsFilter@5382a35f, org.springframework.security.web.authentication.logout.LogoutFilter@126e2710, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@386ea60f, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@c7b100b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ce45e18, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6447dc25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@99774ec, org.springframework.security.web.session.SessionManagementFilter@724e0a77, org.springframework.security.web.access.ExceptionTranslationFilter@4babe06f, org.springframework.security.web.access.intercept.AuthorizationFilter@13fad0c7]
-2024-05-20 16:16:53.142 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:16:53.160 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 16:16:53.172 [main] INFO  : Started EffectiveMobileTestApplication in 4.76 seconds (process running for 5.514)
-2024-05-20 16:18:00.996 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:18:01.000 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 16:18:01.009 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 16:18:08.038 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 16:18:08.071 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 8636 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 16:18:08.072 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 16:18:08.890 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:18:08.891 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 16:18:08.927 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:18:08.928 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:18:08.928 [main] INFO  : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
-2024-05-20 16:18:08.936 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:18:08.937 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 16:18:08.962 [main] INFO  : Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
-2024-05-20 16:18:09.529 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 16:18:09.540 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:18:09.541 [main] INFO  : Starting service [Tomcat]
-2024-05-20 16:18:09.541 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 16:18:09.652 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 16:18:09.653 [main] INFO  : Root WebApplicationContext: initialization completed in 1510 ms
-2024-05-20 16:18:09.802 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 16:18:09.874 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 16:18:10.180 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 16:18:10.373 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41582899
-2024-05-20 16:18:10.374 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 16:18:10.417 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 16:18:11.335 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 16:18:11.351 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:18:12.214 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 16:18:12.469 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58701e8c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@951461a, org.springframework.security.web.context.SecurityContextHolderFilter@38ae69f7, org.springframework.security.web.header.HeaderWriterFilter@4645a575, org.springframework.web.filter.CorsFilter@25fcdcc6, org.springframework.security.web.authentication.logout.LogoutFilter@6484364f, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@2f0e7008, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@307e9c02, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@623d222, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@154208f2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@682270ff, org.springframework.security.web.session.SessionManagementFilter@4c1fed69, org.springframework.security.web.access.ExceptionTranslationFilter@288915a1, org.springframework.security.web.access.intercept.AuthorizationFilter@3b39bee2]
-2024-05-20 16:18:12.811 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:18:12.831 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 16:18:12.883 [main] INFO  : Started EffectiveMobileTestApplication in 5.169 seconds (process running for 6.003)
-2024-05-20 16:19:07.877 [http-nio-8080-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 16:19:07.880 [http-nio-8080-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 16:19:07.880 [http-nio-8080-exec-1] INFO  : Completed initialization in 0 ms
-2024-05-20 16:19:40.753 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:40.753 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:40.779 [http-nio-8080-exec-4] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@65938119, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:19:40.780 [http-nio-8080-exec-4] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@65938119, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:19:42.837 [http-nio-8080-exec-5] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:42.837 [http-nio-8080-exec-5] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:42.844 [http-nio-8080-exec-5] WARN  : Соединение уже было закрыто
-2024-05-20 16:19:43.995 [http-nio-8080-exec-7] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:43.996 [http-nio-8080-exec-7] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:43.996 [http-nio-8080-exec-7] WARN  : Соединение уже было закрыто
-2024-05-20 16:19:44.746 [http-nio-8080-exec-9] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:44.746 [http-nio-8080-exec-9] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:19:44.754 [http-nio-8080-exec-9] WARN  : Соединение уже было закрыто
-2024-05-20 16:24:48.767 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:24:48.769 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 16:24:48.774 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 16:24:52.938 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 16:24:52.977 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 15076 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 16:24:52.978 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 16:24:53.748 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:24:53.749 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 16:24:53.780 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:24:53.781 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:24:53.782 [main] INFO  : Finished Spring Data repository scanning in 29 ms. Found 0 JDBC repository interfaces.
-2024-05-20 16:24:53.789 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:24:53.790 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 16:24:53.821 [main] INFO  : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-2024-05-20 16:24:54.274 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 16:24:54.282 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:24:54.282 [main] INFO  : Starting service [Tomcat]
-2024-05-20 16:24:54.283 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 16:24:54.409 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 16:24:54.410 [main] INFO  : Root WebApplicationContext: initialization completed in 1387 ms
-2024-05-20 16:24:54.549 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 16:24:54.586 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 16:24:54.969 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 16:24:55.160 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@144a5e6e
-2024-05-20 16:24:55.162 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 16:24:55.196 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 16:24:56.088 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 16:24:56.104 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:24:56.693 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 16:24:57.040 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21fa19e4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33a58fcb, org.springframework.security.web.context.SecurityContextHolderFilter@13cc3984, org.springframework.security.web.header.HeaderWriterFilter@e98adb2, org.springframework.web.filter.CorsFilter@10ae002e, org.springframework.security.web.authentication.logout.LogoutFilter@779cb140, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@36a8ebca, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@328e687e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5625ba2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@451f3f66, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@434a72f2, org.springframework.security.web.session.SessionManagementFilter@2c6d442d, org.springframework.security.web.access.ExceptionTranslationFilter@79a92277, org.springframework.security.web.access.intercept.AuthorizationFilter@4645a575]
-2024-05-20 16:24:57.378 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:24:57.403 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 16:24:57.415 [main] INFO  : Started EffectiveMobileTestApplication in 4.772 seconds (process running for 5.46)
-2024-05-20 16:24:59.571 [http-nio-8080-exec-2] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 16:24:59.571 [http-nio-8080-exec-2] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 16:24:59.572 [http-nio-8080-exec-2] INFO  : Completed initialization in 1 ms
-2024-05-20 16:24:59.659 [http-nio-8080-exec-2] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:24:59.659 [http-nio-8080-exec-2] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:24:59.672 [http-nio-8080-exec-2] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@62054a76, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:24:59.673 [http-nio-8080-exec-2] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@62054a76, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:25:01.056 [http-nio-8080-exec-3] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:25:01.057 [http-nio-8080-exec-3] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:25:01.062 [http-nio-8080-exec-3] WARN  : Соединение уже было закрыто
-2024-05-20 16:25:49.477 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:25:49.480 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 16:25:49.483 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 16:25:53.463 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 16:25:53.498 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 6780 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 16:25:53.499 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 16:25:54.222 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:25:54.223 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 16:25:54.264 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:25:54.265 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 16:25:54.266 [main] INFO  : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
-2024-05-20 16:25:54.275 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 16:25:54.276 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 16:25:54.324 [main] INFO  : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
-2024-05-20 16:25:54.846 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 16:25:54.854 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:25:54.854 [main] INFO  : Starting service [Tomcat]
-2024-05-20 16:25:54.855 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 16:25:54.956 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 16:25:54.957 [main] INFO  : Root WebApplicationContext: initialization completed in 1417 ms
-2024-05-20 16:25:55.074 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 16:25:55.114 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 16:25:55.399 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 16:25:55.567 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4948daec
-2024-05-20 16:25:55.569 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 16:25:55.606 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 16:25:56.442 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 16:25:56.455 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:25:57.023 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 16:25:57.322 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bc08a77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37922937, org.springframework.security.web.context.SecurityContextHolderFilter@d6879bf, org.springframework.security.web.header.HeaderWriterFilter@45f70f68, org.springframework.web.filter.CorsFilter@4423692a, org.springframework.security.web.authentication.logout.LogoutFilter@5f6ba085, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@73483d4b, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@8961e55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318a81a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21fa19e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67eabe02, org.springframework.security.web.session.SessionManagementFilter@623d222, org.springframework.security.web.access.ExceptionTranslationFilter@3ca5da54, org.springframework.security.web.access.intercept.AuthorizationFilter@7552f05b]
-2024-05-20 16:25:57.649 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 16:25:57.667 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 16:25:57.680 [main] INFO  : Started EffectiveMobileTestApplication in 4.497 seconds (process running for 5.204)
-2024-05-20 16:26:31.347 [http-nio-8080-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 16:26:31.347 [http-nio-8080-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 16:26:31.348 [http-nio-8080-exec-1] INFO  : Completed initialization in 1 ms
-2024-05-20 16:26:31.452 [http-nio-8080-exec-1] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:31.453 [http-nio-8080-exec-1] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:31.476 [http-nio-8080-exec-1] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@6eba8c64, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:26:31.476 [http-nio-8080-exec-1] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@6eba8c64, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 16:26:33.382 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:33.383 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:33.387 [http-nio-8080-exec-4] WARN  : Соединение уже было закрыто
-2024-05-20 16:26:34.584 [http-nio-8080-exec-5] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:34.585 [http-nio-8080-exec-5] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 16:26:34.585 [http-nio-8080-exec-5] WARN  : Соединение уже было закрыто
-2024-05-20 16:27:36.879 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 16:27:36.881 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 16:27:36.885 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 21:41:41.393 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 21:41:41.440 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 3360 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 21:41:41.441 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 21:41:42.265 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:41:42.266 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 21:41:42.311 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:41:42.312 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:41:42.313 [main] INFO  : Finished Spring Data repository scanning in 41 ms. Found 0 JDBC repository interfaces.
-2024-05-20 21:41:42.324 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:41:42.326 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 21:41:42.362 [main] INFO  : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-2024-05-20 21:41:42.890 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 21:41:42.899 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:41:42.900 [main] INFO  : Starting service [Tomcat]
-2024-05-20 21:41:42.900 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 21:41:42.996 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 21:41:42.997 [main] INFO  : Root WebApplicationContext: initialization completed in 1509 ms
-2024-05-20 21:41:43.126 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 21:41:43.187 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 21:41:43.476 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 21:41:43.722 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@bb12f41
-2024-05-20 21:41:43.724 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 21:41:43.777 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 21:41:44.616 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 21:41:44.626 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:41:45.179 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 21:41:45.458 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e1ce99c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26f7b114, org.springframework.security.web.context.SecurityContextHolderFilter@38326fd5, org.springframework.security.web.header.HeaderWriterFilter@2370c90, org.springframework.web.filter.CorsFilter@43120a77, org.springframework.security.web.authentication.logout.LogoutFilter@d6879bf, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@209d0037, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@22f0e329, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@92775a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45a4587d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b39bee2, org.springframework.security.web.session.SessionManagementFilter@61627c9d, org.springframework.security.web.access.ExceptionTranslationFilter@1e9a10e9, org.springframework.security.web.access.intercept.AuthorizationFilter@434a72f2]
-2024-05-20 21:41:45.807 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:41:45.825 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 21:41:45.837 [main] INFO  : Started EffectiveMobileTestApplication in 4.775 seconds (process running for 5.655)
-2024-05-20 21:41:50.335 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:41:50.338 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 21:41:50.341 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 21:44:18.271 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 21:44:18.303 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 15364 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 21:44:18.304 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 21:44:19.097 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:44:19.099 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 21:44:19.140 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:44:19.142 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:44:19.142 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces.
-2024-05-20 21:44:19.150 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:44:19.151 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 21:44:19.179 [main] INFO  : Finished Spring Data repository scanning in 25 ms. Found 2 JPA repository interfaces.
-2024-05-20 21:44:19.724 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 21:44:19.733 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:44:19.734 [main] INFO  : Starting service [Tomcat]
-2024-05-20 21:44:19.734 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 21:44:19.822 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 21:44:19.822 [main] INFO  : Root WebApplicationContext: initialization completed in 1479 ms
-2024-05-20 21:44:19.947 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 21:44:19.988 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 21:44:20.264 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 21:44:20.427 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1410d645
-2024-05-20 21:44:20.429 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 21:44:20.459 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 21:44:21.246 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 21:44:21.254 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:44:21.825 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 21:44:22.134 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5466a819, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30cb489a, org.springframework.security.web.context.SecurityContextHolderFilter@4e93d23e, org.springframework.security.web.header.HeaderWriterFilter@f73a7cf, org.springframework.web.filter.CorsFilter@68af8288, org.springframework.security.web.authentication.logout.LogoutFilter@1c80f8dd, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@401d83ce, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@3b7b099b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5eadc347, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6771efaa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5abc488d, org.springframework.security.web.session.SessionManagementFilter@53dd29e0, org.springframework.security.web.access.ExceptionTranslationFilter@154208f2, org.springframework.security.web.access.intercept.AuthorizationFilter@3eadfbbb]
-2024-05-20 21:44:22.460 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:44:22.478 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 21:44:22.491 [main] INFO  : Started EffectiveMobileTestApplication in 4.483 seconds (process running for 5.166)
-2024-05-20 21:44:53.520 [http-nio-8080-exec-7] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 21:44:53.528 [http-nio-8080-exec-7] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 21:44:53.528 [http-nio-8080-exec-7] INFO  : Completed initialization in 0 ms
-2024-05-20 21:45:19.834 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:19.834 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:19.850 [http-nio-8080-exec-4] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@ade17ad, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 21:45:19.858 [http-nio-8080-exec-4] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@ade17ad, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 21:45:30.782 [http-nio-8080-exec-5] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:30.782 [http-nio-8080-exec-5] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:30.790 [http-nio-8080-exec-5] WARN  : Соединение уже было закрыто
-2024-05-20 21:45:30.831 [http-nio-8080-exec-5] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
-java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
-	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
-	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
-	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
-	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
-	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
-	at org.apache.coyote.Response.action(Response.java:212)
-	at org.apache.coyote.Response.sendHeaders(Response.java:450)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
-	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
-	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
-	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
-	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-05-20 21:45:42.280 [http-nio-8080-exec-6] INFO  : Started UserServiceImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:42.280 [http-nio-8080-exec-6] INFO  : Started UserDaoImpl findByFilters(null, 12345678, null, daniil@email.com)
-2024-05-20 21:45:42.280 [http-nio-8080-exec-6] WARN  : Соединение уже было закрыто
-2024-05-20 21:45:42.282 [http-nio-8080-exec-6] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
-java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
-	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
-	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
-	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
-	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
-	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
-	at org.apache.coyote.Response.action(Response.java:212)
-	at org.apache.coyote.Response.sendHeaders(Response.java:450)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
-	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
-	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
-	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
-	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-05-20 21:46:13.093 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:46:13.093 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 21:46:13.106 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 21:46:28.742 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 21:46:28.776 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 17856 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 21:46:28.777 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 21:46:29.549 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:46:29.551 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 21:46:29.586 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:46:29.587 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:46:29.589 [main] INFO  : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
-2024-05-20 21:46:29.596 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:46:29.597 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 21:46:29.625 [main] INFO  : Finished Spring Data repository scanning in 24 ms. Found 2 JPA repository interfaces.
-2024-05-20 21:46:30.156 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 21:46:30.173 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:46:30.174 [main] INFO  : Starting service [Tomcat]
-2024-05-20 21:46:30.174 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 21:46:30.297 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 21:46:30.297 [main] INFO  : Root WebApplicationContext: initialization completed in 1477 ms
-2024-05-20 21:46:30.453 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 21:46:30.524 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 21:46:30.793 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 21:46:31.054 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a0d313
-2024-05-20 21:46:31.056 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 21:46:31.084 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 21:46:31.918 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 21:46:31.926 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:46:32.560 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 21:46:32.911 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@14af57c3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@795949fb, org.springframework.security.web.context.SecurityContextHolderFilter@2c750b69, org.springframework.security.web.header.HeaderWriterFilter@6c056020, org.springframework.web.filter.CorsFilter@8dc3019, org.springframework.security.web.authentication.logout.LogoutFilter@3eadfbbb, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@2aeb3f3b, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@281028ce, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6484364f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29a5f924, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46ef7340, org.springframework.security.web.session.SessionManagementFilter@446fb72e, org.springframework.security.web.access.ExceptionTranslationFilter@5c8e7687, org.springframework.security.web.access.intercept.AuthorizationFilter@73483d4b]
-2024-05-20 21:46:33.286 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:46:33.309 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 21:46:33.321 [main] INFO  : Started EffectiveMobileTestApplication in 4.85 seconds (process running for 5.579)
-2024-05-20 21:46:44.888 [http-nio-8080-exec-4] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 21:46:44.888 [http-nio-8080-exec-4] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 21:46:44.889 [http-nio-8080-exec-4] INFO  : Completed initialization in 1 ms
-2024-05-20 21:46:44.975 [http-nio-8080-exec-4] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
-2024-05-20 21:46:44.976 [http-nio-8080-exec-4] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
-2024-05-20 21:46:44.986 [http-nio-8080-exec-4] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@24db357a, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm), UserDto(id=2, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@3db8eef, phoneNumbers=[{sdf}], emails=[{daniil@sdfs.com}], dateOfBirth=null, fullName=null, username=eww, password=$2a$10$XVAsn7W226MG6jvr29zc4uT/fDjyxZWzQr2053Dx3id72C43FZPRK)]
-2024-05-20 21:46:44.986 [http-nio-8080-exec-4] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@24db357a, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm), UserDto(id=2, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@3db8eef, phoneNumbers=[{sdf}], emails=[{daniil@sdfs.com}], dateOfBirth=null, fullName=null, username=eww, password=$2a$10$XVAsn7W226MG6jvr29zc4uT/fDjyxZWzQr2053Dx3id72C43FZPRK)]
-2024-05-20 21:47:03.214 [http-nio-8080-exec-3] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
-2024-05-20 21:47:03.214 [http-nio-8080-exec-3] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
-2024-05-20 21:47:03.216 [http-nio-8080-exec-3] WARN  : Соединение уже было закрыто
-2024-05-20 21:47:03.230 [http-nio-8080-exec-3] WARN  : The HTTP response header [error] with value [Request processing failed: java.lang.RuntimeException: Соединение уже было закрыто] has been removed from the response because it is invalid
-java.lang.IllegalArgumentException: The Unicode character [С] at code point [1,057] cannot be encoded as it is outside the permitted range of 0 to 255
-	at org.apache.tomcat.util.buf.MessageBytes.toBytesSimple(MessageBytes.java:286)
-	at org.apache.tomcat.util.buf.MessageBytes.toBytes(MessageBytes.java:255)
-	at org.apache.coyote.http11.Http11OutputBuffer.write(Http11OutputBuffer.java:394)
-	at org.apache.coyote.http11.Http11OutputBuffer.sendHeader(Http11OutputBuffer.java:372)
-	at org.apache.coyote.http11.Http11Processor.prepareResponse(Http11Processor.java:1066)
-	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:381)
-	at org.apache.coyote.Response.action(Response.java:212)
-	at org.apache.coyote.Response.sendHeaders(Response.java:450)
-	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:288)
-	at org.apache.catalina.connector.OutputBuffer.close(OutputBuffer.java:248)
-	at org.apache.catalina.connector.CoyoteOutputStream.close(CoyoteOutputStream.java:157)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.close(OnCommittedResponseWrapper.java:530)
-	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.close(UTF8JsonGenerator.java:1245)
-	at com.fasterxml.jackson.databind.ObjectMapper._writeValueAndClose(ObjectMapper.java:4629)
-	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:3828)
-	at my.code.effectivemobiletest.filter.CustomAuthorizationFilter.doFilterInternal(CustomAuthorizationFilter.java:54)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-05-20 21:52:17.750 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:52:17.750 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 21:52:17.782 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
-2024-05-20 21:52:24.352 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
-2024-05-20 21:52:24.383 [main] INFO  : Starting EffectiveMobileTestApplication using Java 18.0.2 with PID 13464 (D:\IT.academy\effectiveMobileTest\target\classes started by Daniil in D:\IT.academy\effectiveMobileTest)
-2024-05-20 21:52:24.385 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
-2024-05-20 21:52:25.293 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:52:25.294 [main] INFO  : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-05-20 21:52:25.338 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.BankAccountRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:52:25.341 [main] INFO  : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface my.code.effectivemobiletest.repositories.UserRepo; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2024-05-20 21:52:25.342 [main] INFO  : Finished Spring Data repository scanning in 43 ms. Found 0 JDBC repository interfaces.
-2024-05-20 21:52:25.355 [main] INFO  : Multiple Spring Data modules found, entering strict repository configuration mode
-2024-05-20 21:52:25.357 [main] INFO  : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-05-20 21:52:25.399 [main] INFO  : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
-2024-05-20 21:52:25.995 [main] INFO  : Tomcat initialized with port(s): 8080 (http)
-2024-05-20 21:52:26.006 [main] INFO  : Initializing ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:52:26.006 [main] INFO  : Starting service [Tomcat]
-2024-05-20 21:52:26.007 [main] INFO  : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2024-05-20 21:52:26.102 [main] INFO  : Initializing Spring embedded WebApplicationContext
-2024-05-20 21:52:26.102 [main] INFO  : Root WebApplicationContext: initialization completed in 1671 ms
-2024-05-20 21:52:26.222 [main] INFO  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-05-20 21:52:26.267 [main] INFO  : HHH000412: Hibernate ORM core version 6.1.7.Final
-2024-05-20 21:52:26.525 [main] INFO  : HikariPool-1 - Starting...
-2024-05-20 21:52:26.783 [main] INFO  : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c6379c
-2024-05-20 21:52:26.785 [main] INFO  : HikariPool-1 - Start completed.
-2024-05-20 21:52:26.817 [main] INFO  : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2024-05-20 21:52:27.667 [main] INFO  : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-05-20 21:52:27.676 [main] INFO  : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:52:28.588 [main] WARN  : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-05-20 21:52:28.857 [main] INFO  : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bc08a77, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37922937, org.springframework.security.web.context.SecurityContextHolderFilter@d6879bf, org.springframework.security.web.header.HeaderWriterFilter@45f70f68, org.springframework.web.filter.CorsFilter@76980c75, org.springframework.security.web.authentication.logout.LogoutFilter@5f6ba085, my.code.effectivemobiletest.filter.CustomAuthorizationFilter@73483d4b, my.code.effectivemobiletest.filter.CustomAuthenticationFilter@8961e55, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@318a81a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21fa19e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67eabe02, org.springframework.security.web.session.SessionManagementFilter@623d222, org.springframework.security.web.access.ExceptionTranslationFilter@3ca5da54, org.springframework.security.web.access.intercept.AuthorizationFilter@7552f05b]
-2024-05-20 21:52:29.233 [main] INFO  : Starting ProtocolHandler ["http-nio-8080"]
-2024-05-20 21:52:29.255 [main] INFO  : Tomcat started on port(s): 8080 (http) with context path ''
-2024-05-20 21:52:29.271 [main] INFO  : Started EffectiveMobileTestApplication in 5.227 seconds (process running for 5.931)
-2024-05-20 21:52:38.999 [http-nio-8080-exec-1] INFO  : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-05-20 21:52:38.999 [http-nio-8080-exec-1] INFO  : Initializing Servlet 'dispatcherServlet'
-2024-05-20 21:52:39.007 [http-nio-8080-exec-1] INFO  : Completed initialization in 8 ms
-2024-05-20 21:52:39.232 [http-nio-8080-exec-1] INFO  : Started UserServiceImpl findByFilters(null, null, null, null)
-2024-05-20 21:52:39.232 [http-nio-8080-exec-1] INFO  : Started UserDaoImpl findByFilters(null, null, null, null)
-2024-05-20 21:52:39.242 [http-nio-8080-exec-1] INFO  : Finished UserDaoImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@2bb1be40, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 21:52:39.242 [http-nio-8080-exec-1] INFO  : Finished UserServiceImpl findByFilters(). Result - [UserDto(id=1, bankAccount=my.code.effectivemobiletest.entities.BankAccountEntity@2bb1be40, phoneNumbers=[{12345678}], emails=[{daniil@email.com}], dateOfBirth=null, fullName=null, username=Daniil, password=$2a$10$MJ/Dns71KpCgLzv5/p711ubQ8ytCMdYg.cJvW3mMnDzLXQFkIccWm)]
-2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
-2024-05-20 21:52:51.652 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getApplicationContext(SpringExtension.java:283)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.resolveParameter(SpringExtension.java:269)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameter(ParameterResolutionUtils.java:136)
+	at org.junit.jupiter.engine.execution.ParameterResolutionUtils.resolveParameters(ParameterResolutionUtils.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:59)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestClassConstructor(ClassBasedTestDescriptor.java:363)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateTestClass(ClassBasedTestDescriptor.java:310)
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.instantiateTestClass(ClassTestDescriptor.java:79)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:286)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 79 common frames omitted
+2024-05-21 15:54:36.172 [SpringApplicationShutdownHook] INFO  : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-21 15:54:36.174 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown initiated...
+2024-05-21 15:54:36.180 [SpringApplicationShutdownHook] INFO  : HikariPool-1 - Shutdown completed.
+2024-05-21 16:38:42.288 [main] INFO  : Could not detect default configuration classes for test class [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests]: EffectiveMobileTestApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-05-21 16:38:42.360 [main] INFO  : Found @SpringBootConfiguration my.code.effectivemobiletest.EffectiveMobileTestApplication for test class my.code.effectivemobiletest.EffectiveMobileTestApplicationTests
+2024-05-21 16:38:42.620 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 16:38:42.636 [main] INFO  : Starting EffectiveMobileTestApplicationTests using Java 18.0.2 with PID 5712 (started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 16:38:42.636 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 16:38:42.771 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+2024-05-21 16:38:42.963 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 90 common frames omitted
+2024-05-21 16:38:42.970 [main] ERROR : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests@7bbbb6a8]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@4d48bd85 testClass = my.code.effectivemobiletest.EffectiveMobileTestApplicationTests, locations = [], classes = [my.code.effectivemobiletest.EffectiveMobileTestApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13330ac6, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4331d187, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7e4204e2, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@34f22f9d, org.springframework.boot.test.context.SpringBootTestAnnotation@1991a5e1], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 90 common frames omitted
+2024-05-21 16:41:34.532 [background-preinit] INFO  : HV000001: Hibernate Validator 8.0.0.Final
+2024-05-21 16:41:34.547 [main] INFO  : Starting EffectiveMobileTestApplicationTests using Java 18.0.2 with PID 15332 (started by Daniil in D:\IT.academy\effectiveMobileTest)
+2024-05-21 16:41:34.548 [main] INFO  : No active profile set, falling back to 1 default profile: "default"
+2024-05-21 16:41:34.686 [main] WARN  : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+2024-05-21 16:41:34.840 [main] ERROR : Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 90 common frames omitted
+2024-05-21 16:41:34.847 [main] ERROR : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [my.code.effectivemobiletest.EffectiveMobileTestApplicationTests@7965a51c]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@486bc9a4 testClass = my.code.effectivemobiletest.EffectiveMobileTestApplicationTests, locations = [], classes = [my.code.effectivemobiletest.EffectiveMobileTestApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["spring.config.location=classpath:/application.properties", "org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@d62fe5b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@27eedb64, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6b88ca8c, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@30af5b6b, org.springframework.boot.test.context.SpringBootTestAnnotation@1991a5e1], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:142)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:127)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:241)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:382)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:377)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:376)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:289)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:288)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:278)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:277)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:105)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [my.code.effectivemobiletest.EffectiveMobileTestApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:59)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:47)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1388)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:545)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:184)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:118)
+	... 72 common frames omitted
+Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/application.properties]
+	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:164)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:160)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:100)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:74)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:60)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.core.io.support.PropertySourceProcessor.processPropertySource(PropertySourceProcessor.java:87)
+	at org.springframework.context.annotation.PropertySourceRegistry.processPropertySource(PropertySourceRegistry.java:77)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:273)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164)
+	... 90 common frames omitted
+2024-05-21 16:44:02.760 [main] INFO  : Started UserServiceImpl transaction(22222, 50)
+2024-05-21 16:44:36.832 [main] INFO  : Started UserServiceImpl transaction(11111, 50)
+2024-05-21 16:44:36.835 [main] WARN  : User cannot transfer money to their own account!
+2024-05-21 16:44:48.761 [main] INFO  : Started UserServiceImpl transaction(22222, 150)
+2024-05-21 16:44:48.763 [main] WARN  : User doesn't have enough money for transaction! Please top up your balance.
+2024-05-21 16:45:01.760 [main] INFO  : Started UserServiceImpl transaction(22222, -50)
+2024-05-21 16:45:01.762 [main] WARN  : Amount to transfer must be greater than zero!
+2024-05-21 16:45:32.864 [main] INFO  : Started UserServiceImpl transaction(22222, 50)
+2024-05-21 16:45:32.867 [main] WARN  : User with id 22222 is not found!
+2024-05-21 16:45:55.038 [main] INFO  : Started UserServiceImpl transaction(22222, 50)
+2024-05-21 16:45:55.041 [main] WARN  : User with id 22222 is not found!

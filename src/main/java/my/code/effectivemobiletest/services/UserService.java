@@ -25,5 +25,5 @@ public interface UserService {
                                 int page,
                                 int pageSize);
 
-    String transaction(Long transferToUserId, BigDecimal amountToTransfer);
+    String transaction(String transferFromUsername, Long transferToUserId, BigDecimal amountToTransfer);
 }

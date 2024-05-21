@@ -14,6 +14,8 @@ import my.code.effectivemobiletest.exceptions.SameUserTransactionException;
 import my.code.effectivemobiletest.services.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -222,7 +224,8 @@ public class UserController {
     public ResponseEntity<String> transaction(@RequestParam Long transferToUserId,
                                               @RequestParam BigDecimal amountToTransfer) {
         try {
-            return new ResponseEntity<>(userService.transaction(transferToUserId, amountToTransfer), HttpStatus.OK);
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            return new ResponseEntity<>(userService.transaction(authentication.getName(), transferToUserId, amountToTransfer), HttpStatus.OK);
         } catch (NullPointerException | InsufficientFundsException |
                  SameUserTransactionException | IllegalArgumentException exception) {
             return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);

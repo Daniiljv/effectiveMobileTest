@@ -279,12 +279,10 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Transactional
     @Override
-    public String transaction(Long transferToUserId, BigDecimal amountToTransfer) {
+    public String transaction(String transferFromUsername, Long transferToUserId, BigDecimal amountToTransfer) {
         log.info(String.format("Started UserServiceImpl transaction(%s, %s)", transferToUserId, amountToTransfer));
 
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-
-        UserEntity userFrom = userRepo.findByUsername(authentication.getName());
+        UserEntity userFrom = userRepo.findByUsername(transferFromUsername);
         UserEntity userTo = userRepo.findById(transferToUserId)
                 .orElseThrow(() -> {
                     log.warn("User with id " + transferToUserId + " is not found!");

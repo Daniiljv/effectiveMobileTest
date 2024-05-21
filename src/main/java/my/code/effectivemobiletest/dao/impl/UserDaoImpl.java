@@ -2,12 +2,12 @@ package my.code.effectivemobiletest.dao.impl;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import my.code.effectivemobiletest.configs.DatabaseConfig;
 import my.code.effectivemobiletest.dao.UserDao;
 import my.code.effectivemobiletest.dtos.UserDto;
 import my.code.effectivemobiletest.entities.BankAccountEntity;
 import org.springframework.stereotype.Service;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,8 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserDaoImpl implements UserDao {
 
-    private final DatabaseConfig databaseConfig;
-
+    private final DataSource dataSource;
     @Override
     public List<UserDto> findByFilters(Date dateOfBirth,
                                        String phoneNumber,
@@ -66,7 +65,7 @@ public class UserDaoImpl implements UserDao {
         query.append(" LIMIT ? OFFSET ?");
 
 
-        try (Connection connection = databaseConfig.connection();
+        try (Connection connection = dataSource.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(query.toString())) {
 
             for (int i = 0; i < parameters.size(); i++) {
